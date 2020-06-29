@@ -4,6 +4,8 @@ const morgan = require('morgan')
 const cors = require('cors')
 const helmet = require('helmet')
 const EmdRouter = require('./router')
+const authRouter = require('./authRouter')
+const authMiddleware = require('./authMiddleware')
 const {
     NODE_ENV
 } = require('./config')
@@ -18,6 +20,8 @@ app.use(morgan(morganOption))
 app.use(helmet())
 app.use(cors())
 
+app.use(authRouter)
+app.use(authMiddleware)
 app.use(EmdRouter)
 
 app.get('/', (req, res) => {

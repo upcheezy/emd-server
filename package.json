@@ -8,7 +8,8 @@
     "test": "mocha --require test/setup.js",
     "dev": "nodemon src/server.js",
     "predeploy": "npm audit",
-    "deploy": "git push heroku master"
+    "deploy": "git push heroku master",
+    "migrate:production": "env SSL=true DATABASE_URL=$(heroku config:get DATABASE_URL)"
   },
   "keywords": [],
   "author": "",
