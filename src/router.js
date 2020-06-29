@@ -53,6 +53,7 @@ EmdRouter
         const {
             countyname
         } = req.body
+        console.log(countyname)
         EmdService.getCounties(
                 req.app.get('db'),
                 countyname
