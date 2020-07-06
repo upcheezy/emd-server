@@ -24,7 +24,6 @@ authRouter
                 if (!user) {
                     // throw new Error()
                 }
-                console.log(user.rows[0].password)
                 return bcrypt.compare(password, user.rows[0].password)
             })
             .then(validate => {
@@ -47,7 +46,6 @@ authRouter
 authRouter
     .route('/signup')
     .post(bodyParser, (req, res, next) => {
-        console.log(req)
         const {
             firstname,
             lastname,
