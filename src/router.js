@@ -28,7 +28,7 @@ EmdRouter
 EmdRouter
     .route('/draw')
     .post(bodyParser, (req, res, next) => {
-        // console.log(req.body)
+        console.log(req.body)
         // destructuring below
         const {
             coords,

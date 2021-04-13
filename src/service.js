@@ -25,6 +25,7 @@ const EmdService = {
             // console.log(datapoints)
             geomType = 'MULTIPOINT'
             coordinates = `((${datapoints.toString().replace(',', ' ')}))`;
+            console.log(coordinates)
         }
         
         return knex.raw(`
